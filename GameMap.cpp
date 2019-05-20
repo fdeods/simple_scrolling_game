@@ -11,7 +11,7 @@ GameMap::GameMap(SDL_Surface* scr)
 {
   loadMap();
   if (blocksImage)
-    SDL_SetColorKey(blocksImage.get(), SDL_SRCCOLORKEY, SDL_MapRGB(screen->format, 0x00, 0xff, 0xff));
+    SDL_SetColorKey(blocksImage.get(), SDL_SRCCOLORKEY, SDL_MapRGB(blocksImage->format, 0x00, 0xff, 0xff));
 }
 
  MapPoint const& GameMap::getPlayerStartPosition()

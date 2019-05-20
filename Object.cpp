@@ -11,7 +11,7 @@ Object::Object(SDL_Surface* scr, const char* filePath, Sint16 x, Sint16 y, Uint1
     startY(y)
 {  
   if (image)
-    SDL_SetColorKey(image.get(), SDL_SRCCOLORKEY, SDL_MapRGB(screen->format, Uint8(0x00), Uint8(0xff), Uint8(0xff)));
+    SDL_SetColorKey(image.get(), SDL_SRCCOLORKEY, SDL_MapRGB(image->format, 0x00, 0xff, 0xff));
 }
 
 void Object::render(Sint16 cameraOffset)
